@@ -22,7 +22,7 @@ The Mecanum Wheel Robot Chassis features Mecanum wheels, which serve as both the
 
 The Mecanum wheel robot uses high-torque, high-load encoded reduction motors, model `JGB37-528R131-08`. The motor operates at 8V with a reduction ratio of 1:131.
 
-<img src="../_static/media/chapter_1/image4.png" class="common_img" />
+<img src="../_static/media/chapter_1/image4.png" class="common_img" style="width:400px;"/>
 
 ### 1.2.2 Physical Characteristics
 
@@ -50,13 +50,13 @@ In this tutorial document, separate folders and corresponding documentation have
 
 ## 1.4 Specification
 
-<table  class="docutils-nobg" style="margin:0 auto" border="1">
+<table  class="docutils-nobg" style="width:600px;" border="1">
   <tr>
     <th colspan="2">Mecanum-Wheel Chassis</th>
   </tr>
   <tr>
     <td colspan="2">
-      <img src="../_static/media/chapter_1/image2.png" class="common_img" />
+      <img src="../_static/media/chapter_1/image2.png" />
     </td>
   </tr>
   <tr>
@@ -89,7 +89,7 @@ In this tutorial document, separate folders and corresponding documentation have
   </tr>
 </table>
 
-<table  class="docutils-nobg" style="margin:0 auto" border="1">
+<table  class="docutils-nobg" style="width:600px;" border="1">
   <tr>
     <th colspan="2">520 Encoder DC Gear Motor</th>
   </tr>

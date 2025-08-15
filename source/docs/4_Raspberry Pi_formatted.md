@@ -40,17 +40,17 @@ The Raspberry Pi 4B is a compact embedded computer equipped with a 500MHz GPU. I
 
 Below is the pinout diagram for the Raspberry Pi 4B, which will be referenced in the upcoming wiring and development process.
 
-<img src="../_static/media/chapter_4/section_1/media/image2.png" class="common_img" />
+<img src="../_static/media/chapter_4/image2.png" class="common_img" />
 
 ### 4.2.2 4-Channel Encoder Motor Driver
 
 This motor driver module is designed to work with microcontrollers to drive TT motors or magnetic encoder motors. Each channel is equipped with an YX-4055AM motor driver chip, which supports a voltage range of DC 3V-12V, depending on the voltage of the connected motor. The interface layout is shown in the diagram below.
 
-<img src="../_static/media/chapter_4/section_1/media/image3.png" class="common_img" />
+<img src="../_static/media/chapter_4/image3.png" class="common_img" />
 
 * **Interface Pin Description**
 
-<table border="1">
+<table  class="docutils-nobg" border="1">
   <thead>
     <tr>
       <th>Interface Type</th>
@@ -128,6 +128,7 @@ This motor driver module is designed to work with microcontrollers to drive TT m
     </tr>
   </tbody>
 </table>
+
 ### 4.2.3 Encoder Reduction Motor
 
 The chassis is equipped with a motor model JGB37-528R131-08. The designation details are as follows:
@@ -146,7 +147,7 @@ The chassis is equipped with a motor model JGB37-528R131-08. The designation det
 
 The interface details are shown in the diagram below:
 
-<img src="../_static/media/chapter_4/section_1/media/image4.png" class="common_img" />
+<img src="../_static/media/chapter_4/image4.png" class="common_img" />
 
 The Hall encoder disk is mounted coaxially with the motor. As the motor rotates, the Hall sensor detects and outputs a series of pulse signals. To determine the direction of rotation, two square wave signals with a certain phase difference are typically output.
 
@@ -156,15 +157,15 @@ In this example, the Raspberry Pi controller is used along with the 4-channel en
 
 In the diagram, the left motor on the front side of the vehicle is labeled M1, and the right motor is labeled M3. The remaining wiring content is a rendered image, where the pin layout matches the physical connections. Please note that the actual application effect is not affected by this rendering, and the real physical setup should be used as the reference.
 
-<img src="../_static/media/chapter_4/section_1/media/image5.png" class="common_img" />
+<img src="../_static/media/chapter_4/image5.png" class="common_img" />
 
-<img src="../_static/media/chapter_4/section_1/media/image6.png" class="common_img" />
+<img src="../_static/media/chapter_4/image6.png" class="common_img" />
 
 ## 4.4 Environment Setup and Program Execution
 
 ### 4.4.1 Environment Setup
 
-Install NoMachine on the computer. The software package can be found under [Appendix->Remote Desktop Connection Tools (for Raspberry Pi)](). Follow the instructions in the [NoMachine Installation and Usage]() document in the folder for installation and configuration.
+Install NoMachine on the computer. The software package can be found under [Appendix->Remote Desktop Connection Tools (for Raspberry Pi)](Appendix.md). Follow the instructions in the **NoMachine Installation and Usage** document in the folder for installation and configuration.
 
 ### 4.4.2 Executing the Program
 
@@ -172,15 +173,15 @@ Place the Program Files in the Specified Directory
 
 (1) Open NoMachine and connect to the robot.
 
-<img src="../_static/media/chapter_4/section_1/media/image7.png" class="common_img" />
+<img src="../_static/media/chapter_4/image7.png" class="common_img" />
 
-(2) Drag the demo file from the path [Appendix->Programs]() to the desktop, as shown in the figure below. Wait for the program to load on the desktop.
+(2) Drag the demo file from the path [Appendix->Programs](Appendix.md) to the desktop, as shown in the figure below. Wait for the program to load on the desktop.
 
-<img src="../_static/media/chapter_4/section_1/media/image8.png" class="common_img" />
+<img src="../_static/media/chapter_4/image8.png" class="common_img" />
 
 Wait for the program to load onto the desktop.
 
-<img src="../_static/media/chapter_4/section_1/media/image9.png" class="common_img" />
+<img src="../_static/media/chapter_4/image9.png" class="common_img" />
 
 (3) Extract the package to the desktop by entering the command:
 
@@ -188,13 +189,13 @@ Wait for the program to load onto the desktop.
 unzip control_demo.zip
 ```
 
-(4) Copy the package to the [`/home/ubuntu/armpi_pro/src/`]() directory.
+(4) Copy the package to the `/home/ubuntu/armpi_pro/src/` directory.
 
-<img src="../_static/media/chapter_4/section_1/media/image12.png" class="common_img" />
+<img src="../_static/media/chapter_4/image12.png" class="common_img" />
 
-(5) Open a terminal in the [`/home/ubuntu/armpi_pro/`]() directory.
+(5) Open a terminal in the `/home/ubuntu/armpi_pro/` directory.
 
-<img src="../_static/media/chapter_4/section_1/media/image13.png" class="common_img" />
+<img src="../_static/media/chapter_4/image13.png" class="common_img" />
 
 (6) Enter the command `catkin_make` to compile the package. The compilation will take approximately 4 minutes to complete.
 
@@ -222,7 +223,7 @@ This will start the robot's control program. Ensure that I2C communication is co
 
 (9) Wait for the program to load. Once the loading process is complete, the robot will perform the corresponding movements as defined in the program.
 
-<img src="../_static/media/chapter_4/section_1/media/image19.png" class="common_img" />
+<img src="../_static/media/chapter_4/image19.png" class="common_img" />
 
 (10) To exit the program, press Ctrl+C in the terminal. This will safely terminate the running program.
 
@@ -244,7 +245,7 @@ Each action lasts for **2 seconds**, with a **1-second** interval between action
 
 ## 4.5 Brief Analysis of Example Program
 
-[Source Code]()
+[Source Code](../_static/source_code/control_demo.zip)
 
 * **Importing Necessary Modules**
 
@@ -259,7 +260,8 @@ The initial setup and library imports in the `chassis_control_node.py` and `cont
 (4)  `smbus2` Library: An open-source Python library for I2C communication, enabling control of the robot's motors.
 
 It can be installed using the following command:
-```
+
+```bash
 pip install smbus2
 ```
 
@@ -281,6 +283,7 @@ from std_msgs.msg import *
 from control_demo.msg import *
 from armpi_pro import Misc
 ```
+
 {lineno-start=1}
 ```python
 #!/usr/bin/env python3
@@ -289,6 +292,7 @@ import rospy
 from control_demo.msg import SetVelocity
 from control_demo.msg import SetSpeed
 ```
+
 ### 4.5.1 Motion Functions
 
 * **Forward and Reverse Motion**
@@ -317,6 +321,7 @@ rospy.sleep(2)
 set_velocity.publish(0, 0, 0)  # Stop movement
 rospy.sleep(1)
 ```
+
 * **Left and Right Translation**
 
 (1) For the leftward translation, `publish(150, 180, 0)` is used, where 180 indicates a direction toward the left.
@@ -337,6 +342,7 @@ rospy.sleep(2)
 set_velocity.publish(0, 0, 0)  # Stop movement
 rospy.sleep(1)
 ```
+
 * **Stationary Left and Right Turns**
 
 (1) In the command `publish(0, 90, -0.3)`,
@@ -361,6 +367,7 @@ rospy.sleep(2)
 set_velocity.publish(0, 0, 0)  # Stop movement
 rospy.sleep(1)
 ```
+
 * **Left Forward and Right Reverse Movements**
 
 (1) For the left forward and right reverse motion, `publish(150, 135, 0)` is used.
@@ -383,7 +390,8 @@ rospy.sleep(2)
 set_velocity.publish(0, 0, 0)  # Stop movement
 rospy.sleep(1)
 ```
-<img src="../_static/media/chapter_4/section_1/media/image26.png" class="common_img" />
+
+<img src="../_static/media/chapter_4/image26.png" class="common_img" />
 
 * **Left and Right Drifting**
 
@@ -407,6 +415,7 @@ rospy.sleep(2)
 set_speed.publish(0, 0, 0, 0)  # Stop movement
 rospy.sleep(1)
 ```
+
 ### 4.5.2 Motion Calculation
 
 * **Initialization of Chassis Motion Parameters**
@@ -429,6 +438,7 @@ rospy.sleep(1)
         self.direction = 0
         self.angular_rate = 0
 ```
+
 * **Motion Calculation in set_velocity Function**
 
 (1) The `set_velocity` function performs motion calculation, determining the speed of each motor for different motion types.
@@ -443,6 +453,7 @@ rospy.sleep(1)
 ```python
     def set_velocity(self, velocity, direction, angular_rate, fake=False):
 ```
+
 * **Conversion from Degrees to Radians**
 
 (1) `rad_per_deg`: The conversion factor from degrees to radians, since `math.cos` and `math.sin` functions use radians.
@@ -473,6 +484,7 @@ rospy.sleep(1)
         self.direction = direction
         self.angular_rate = angular_rate
 ```
+
 * **Conversion of Linear Speed to Wheel Speed**
 
 (1) The circumference of each wheel is calculated as `math.pi` * `self.wheel_diameter`.
@@ -489,6 +501,7 @@ rospy.sleep(1)
         if fake:
             return v_s
 ```
+
 {lineno-start=58}
 ```python
     def speed_covert(self, speed):
@@ -499,6 +512,7 @@ rospy.sleep(1)
         """
         return speed / (math.pi * self.wheel_diameter) * self.pulse_per_cycle * 0.01  # pulse/10ms
 ```
+
 ### 4.5.3 Setting Up Drifting Motion
 
 (1) In the `chassis_control_node.py` program, add a topic subscription and initialize the `chassis_control_node` node. Then, set up the topic subscription:
@@ -513,6 +527,7 @@ if __name__ == '__main__':
     set_translation_sub = rospy.Subscriber('/chassis_control/set_translation', SetTranslation, Set_Translation)
     set_speed_sub = rospy.Subscriber('/chassis_control/set_speed', SetSpeed, Set_Speed)
 ```
+
 (2) Add the `Set_Speed(msg)` callback function to handle the incoming messages.
 
 {lineno-start=219}
@@ -525,6 +540,7 @@ def Set_Speed(msg):
     v4 = msg.v4
     chassis.set_Speed(v1,v2,v3,v4)
 ```
+
 (3) In the `MecanumChassis` class, implement the `set_Speed(self, v1, v2, v3, v4)` function to convert the velocity values and set the speeds of each motor.
 
 {lineno-start=105}
@@ -535,27 +551,30 @@ def Set_Speed(msg):
 
         self.motor_controller.set_speed(v_s)
 ```
+
 (4) In the `controller_demo.py` program, import the `SetSpeed` message and publish the speeds for the two rear motors.
 
 {lineno-start=5}
 ```python
 from control_demo.msg import SetSpeed
 ```
+
 {lineno-start=74}
 ```python
     set_speed.publish(-150, 150, 0, 0)
 ```
-(5) Add a new `SetSpeed.msg` file in the path [`/home/ubuntu/armpi_pro/src/chassis_control/msg/`](). The content of the message is as follows:
 
-<img src="../_static/media/chapter_4/section_1/media/image38.png" class="common_img" />
+(5) Add a new `SetSpeed.msg` file in the path `/home/ubuntu/armpi_pro/src/chassis_control/msg/`. The content of the message is as follows:
 
-(6) Modify the `CMakeLists.txt` file in the [`/home/ubuntu/armpi_pro/src/control_demo/`]() path to include the `SetSpeed.msg` message.
+<img src="../_static/media/chapter_4/image38.png" class="common_img" />
 
-<img src="../_static/media/chapter_4/section_1/media/image39.png" class="common_img" />
+(6) Modify the `CMakeLists.txt` file in the `/home/ubuntu/armpi_pro/src/control_demo/` path to include the `SetSpeed.msg` message.
 
-(7) The provided example is already set up, but if new messages are added or changes are made, you need to navigate to the [`/home/ubuntu/armpi_pro`]() directory and run the following command to compile the changes:
+<img src="../_static/media/chapter_4/image39.png" class="common_img" />
 
-<img src="../_static/media/chapter_4/section_1/media/image40.png" class="common_img" />
+(7) The provided example is already set up, but if new messages are added or changes are made, you need to navigate to the `/home/ubuntu/armpi_pro` directory and run the following command to compile the changes:
+
+<img src="../_static/media/chapter_4/image40.png" class="common_img" />
 
 ### 4.5.4 I2C Communication for Motor Speed Control
 
@@ -567,7 +586,7 @@ The `smbus2.SMBus` is used to create an I2C communication instance, allowing com
 
 The speed command is sent to the motor control module using the `bus.write_i2c_block_data` function. The motor module's I2C address is defined as `ENCODER_MOTOR_MODULE_ADDRESS` = 0x34.
 
-Here’s an example of how this can be implemented:
+Here's an example of how this can be implemented:
 
 {lineno-start=25}
 ```python
@@ -588,6 +607,7 @@ Here’s an example of how this can be implemented:
                 th = None
                 print(e)
 ```
+
 ## 4.6 Development Considerations
 
 ### 4.6.1 Power Supply for Raspberry Pi 4B 
@@ -598,7 +618,7 @@ Here’s an example of how this can be implemented:
 
 A dual power supply setup is suggested. Use an external power supply to power the motor driver module (e.g., an 11.1V lithium battery, fully charged to 12V), while powering the Raspberry Pi 4B with a separate 5V, 3A power supply.
 
-<img src="../_static/media/chapter_4/section_1/media/image42.png" class="common_img" />
+<img src="../_static/media/chapter_4/image42.png" class="common_img" />
 
 ### 4.6.2 Why Not Power Through GPIO Pins? 
 
@@ -620,4 +640,4 @@ A dual power supply setup is suggested. Use an external power supply to power th
 
 The following diagram illustrates the physical pinout of the Raspberry Pi. It shows two types of pin numbering systems: BCM (Broadcom) and wiringPi. When programming, you can choose either encoding method and set it accordingly in your code.
 
-<img src="../_static/media/chapter_4/section_1/media/image43.png" class="common_img" />
+<img src="../_static/media/chapter_4/image43.png" class="common_img" />
