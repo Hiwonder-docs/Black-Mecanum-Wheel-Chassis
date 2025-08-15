@@ -577,7 +577,7 @@ encoder_motor_object_init(motors[i]);
 
 (5) The program in [..\Hiwonder\Peripherals\encoder_motor.c](https://drive.google.com/drive/folders/1ADelSq-o8fVjoKC-mlzrg3Q-FqtVkm05?usp=sharing) is shown in the diagram below.
 
-{lineno-start=}
+{lineno-start=72}
 ```c
 void encoder_motor_object_init(EncoderMotorObjectTypeDef *self)
 {
@@ -628,14 +628,14 @@ void encoder_motor_object_init(EncoderMotorObjectTypeDef *self)
 
 In the [..\Hiwonder\System\app.c](https://drive.google.com/drive/folders/1ADelSq-o8fVjoKC-mlzrg3Q-FqtVkm05?usp=sharing) file, the chassis motor motion parameters are initialized. For the Mecanum wheel chassis, the type used is `CHASSIS_TYPE_MECANUM`.
 
-{lineno-start=}
+{lineno-start=27}
 
 ```c
 //Chassis Type
 uint32_t Chassis_run_type = CHASSIS_TYPE_JETAUTO;
 ```
 
-{lineno-start=}
+{lineno-start=82}
 ```c
     //Initialize chassis motor motion parameters
     chassis_init();     
@@ -771,11 +771,6 @@ void encoder_motor_control(EncoderMotorObjectTypeDef *self, float period)
 ```
 
 (5) `self->set_pulse` passes the PWM values to the `motor1_set_pulse()` function. When the speed is positive, `TIM_CHANNEL_4` (forward) is activated. When the speed is negative, `TIM_CHANNEL_3` (reverse) is activated. When the speed is zero, both channels stop, and the motor halts. This process is shown in [..\Hiwonder\Portings\motor_porting.c](https://drive.google.com/drive/folders/1ADelSq-o8fVjoKC-mlzrg3Q-FqtVkm05?usp=sharing).
-
-{lineno-start=}
-```c
-
-```
 
 {lineno-start=57}
 ```c

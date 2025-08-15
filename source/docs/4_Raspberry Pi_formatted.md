@@ -378,7 +378,7 @@ rospy.sleep(1)
 
 (4) Similarly, `publish(150, 315, 0)` would make the robot move 45° rightward in the opposite diagonal (reverse-right direction).
 
-{lineno-start=}
+{lineno-start=64}
 ```python
 set_velocity.publish(150, 135, 0)  # Control chassis to move diagonally forward-left: linear velocity 150, direction angle 135°, yaw rate 0 (positive = clockwise)
 rospy.sleep(2)
@@ -462,7 +462,7 @@ rospy.sleep(1)
 
 (3) `vp`: A variable that is determined by the rotational speed (`angular_rate`), the distance between the left and right wheels (`self.a`), and the distance between the front and rear wheels (`self.b`). This is used to calculate the speed of the chassis rotation.
 
-{lineno-start=}
+{lineno-start=85}
 ```python
         velocity = -velocity
         angular_rate = -angular_rate
