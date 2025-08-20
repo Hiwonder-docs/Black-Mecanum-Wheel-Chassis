@@ -18,19 +18,27 @@ After the program is downloaded, the robot chassis will perform the actions in t
 
 (1) Motor, Couplings & Mecanum-wheel Installation
 
-[补充视频]
+<p>
+<iframe width="100%" height="713" src="https://www.youtube.com/embed/xJ2D6Cs99mU" title="Black Mecanum-Wheel Chassis Tutorials--01 Motor, Couplings & Mecanum wheel Installation (STM32)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
 
 (2) Expansion Board Installation
 
-[补充视频]
+<p>
+<iframe width="100%" height="713" src="https://www.youtube.com/embed/XBHmd0zWU1w" title="Black Mecanum-Wheel Chassis Tutorials--02 Expansion Board Installation (STM32)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
 
 (3)  STM32 Controller & Wiring
 
-[补充视频]
+<p>
+<iframe width="100%" height="713" src="https://www.youtube.com/embed/L561XGbEPC0" title="Black Mecanum-Wheel Chassis Tutorials--04 LiPo Battery Installation (STM32)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
 
 (4) LiPo Battery Installation
 
-[补充视频]
+<p>
+<iframe width="100%" height="713" src="https://www.youtube.com/embed/Dsb5ch0HK0M" title="Black Mecanum-Wheel Chassis Tutorials--03 STM32 Controller & Wiring (STM32)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
 
 ## 2.2 Hardware Introduction
 
