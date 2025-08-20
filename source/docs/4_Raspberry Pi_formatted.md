@@ -18,19 +18,33 @@ Each action will be executed for 2 seconds, with a 1-second interval between eac
 
 (1) Components Required for Raspberry Pi Development
 
-[补充视频]
+<p>
+<iframe width="100%" height="713" src="https://www.youtube.com/embed/hN712DSyClE" title="Black Mecanum-Wheel Chassis Tutorials--01 Components Required for Raspberry Pi Development (RPI)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
 
-(2) Raspberry Pi 4B Installation
+(2) Motor Driver Installation (RPI)
 
-[补充视频]
+<p>
+<iframe width="100%" height="713" src="https://www.youtube.com/embed/-O2PO6aBFGg" title="Black Mecanum-Wheel Chassis Tutorials--02 Motor Driver Installation (RPI)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
 
-(3) Wiring Instruction
+(3) Raspberry Pi 4B Installation
 
-[补充视频]
+<p>
+<iframe width="100%" height="713" src="https://www.youtube.com/embed/gO2bnWf97Ss" title="Black Mecanum-Wheel Chassis Tutorials--03 Raspberry Pi 4B Installation (RPI)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
 
-(4) Battery Connection
+(4) Wiring Instruction
 
-[补充视频]
+<p>
+<iframe width="100%" height="713" src="https://www.youtube.com/embed/knFz17TO06c" title="Black Mecanum-Wheel Chassis Tutorials--04 Wiring Instruction (RPI)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
+
+(5) Battery Connection
+
+<p>
+<iframe width="100%" height="713" src="https://www.youtube.com/embed/IPo8c4O9tRU" title="Black Mecanum-Wheel Chassis Tutorials--05 Battery Connection" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</p>
 
 ## 4.2 Hardware Introduction
 
